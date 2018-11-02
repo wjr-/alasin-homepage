@@ -49,7 +49,7 @@ div .logo {
 
 .tab-selected,
 .tab:hover {
-    background-color: #efefef;
+    background-color: rgba(204, 204, 204, 0.5);
 }
 
 .tab-fb {
@@ -82,6 +82,16 @@ div .logo {
 
 .tab-media {
     background-image: url(images/drive.png);
+}
+
+.tab-recordstore {
+    background-position: 50% 15%;
+    background-image: url(images/levykauppax.gif);
+    background-size: 32px 37px;
+}
+
+.tab-harharetket {
+    background-image: url(images/harharetket-small.png);
 }
 
 .embedded {
