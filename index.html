@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alasin</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	 crossorigin="anonymous">
+	<link rel="stylesheet" href="content/alasin_v41.css">
+	<!-- favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=BGBG5MgyMQ">
+	<link rel="icon" type="image/png" href="/favicon-32x32.png?v=BGBG5MgyMQ" sizes="32x32">
+	<link rel="icon" type="image/png" href="/favicon-16x16.png?v=BGBG5MgyMQ" sizes="16x16">
+	<link rel="manifest" href="/manifest.json?v=BGBG5MgyMQ">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg?v=BGBG5MgyMQ" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicon.ico?v=BGBG5MgyMQ">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 logo"></div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="row">
+					<!-- Navigation on larger screens -->
+					<div class="col-xs-4 col-sm-3 mobile-hidden tab tab-fb" data-target="fb">
+						<div>Facebook</div>
+					</div>
+					<div class="col-xs-4 col-sm-3 mobile-hidden tab tab-spotify" data-target="spotify">
+						<div>Spotify</div>
+					</div>
+					<div class="col-xs-4 col-sm-3 mobile-hidden tab tab-youtube" data-target="youtube">
+						<div>Youtube</div>
+					</div>
+					<div class="col-xs-4 col-sm-3 mobile-hidden tab tab-gigs" data-target="gigs">
+						<div>Keikat</div>
+					</div>
+					<div class="col-xs-4 col-sm-3 mobile-hidden tab tab-media" data-target="media">
+						<div>Medialle</div>
+					</div>
+					<!-- Show as links on mobile -->
+					<a href="https://www.facebook.com/alasinyhtye/" class="col-xs-4 col-sm-3 mobile-visible-block tab tab-link tab-fb" target="_blank">
+						<div>Facebook
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+					<a href="https://open.spotify.com/artist/5QgxtkJBLY1GOKCaVCXXM8" class="col-xs-4 col-sm-3 mobile-visible-block tab tab-link tab-spotify"
+					 target="_blank">
+						<div>Spotify
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+					<a href="https://www.youtube.com/channel/UCjuBiZhg8gHDwM10KR4-tYw" class="col-xs-4 col-sm-3 mobile-visible-block tab tab-link tab-youtube"
+					 target="_blank">
+						<div>Youtube
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+					<a href="http://www.bandsintown.com/Alasin" class="col-xs-4 col-sm-3 mobile-visible-block tab tab-gigs" target="_blank">
+						<div>Keikat
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+					<a href="https://drive.google.com/open?id=0BxvX8zGLoTL7MERMeERKYWFKRmc" class="col-xs-4 col-sm-3 mobile-visible-block tab tab-link tab-media"
+					 target="_blank">
+						<div>Medialle
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+					<!-- Always links -->
+					<a href="https://www.discogs.com/artist/4263736-Alasin" class="col-xs-4 col-sm-3 tab tab-link tab-link tab-discogs" target="_blank">
+						<div>Julkaisut
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+					<a href="https://www.instagram.com/alasinyhtye/" class="col-xs-4 col-sm-3 tab tab-link tab-link tab-instagram" target="_blank">
+						<div>Instagram
+							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div id="content-container" class="row mobile-hidden">
+			<div id="dummy-content"></div>
+		</div>
+		<div class="landscape-hint">
+			<h2>
+				<span class="glyphicon glyphicon-phone rotate-right-angle" aria-hidden="true"></span>
+			</h2>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 contact">
+				<span>Yhteys / Contact: yhteys@alasin.fi, 050-3518215</span>
+			</div>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		 crossorigin="anonymous"></script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(".tab:not('.tab-link')").click(function () {
+
+					$(".tab").removeClass("tab-selected");
+					$(this).addClass("tab-selected");
+
+					var targetName = $(this).attr("data-target");
+
+					var oldContent = $("div[id$='content']:visible");
+					var newContent = $("#" + targetName + "-content");
+					var contentLoaded = true;
+					if (newContent.length === 0) {
+						contentLoaded = false;
+						newContent = $("<div id='" + targetName + "-content'></div>")
+							.hide()
+							.addClass("col-md-6 col-md-offset-3");
+						$("#content-container").append(newContent);
+					}
+
+					oldContent.fadeOut(function () {
+						var newContent = $("#" + targetName + "-content");
+						if (contentLoaded) {
+							newContent.fadeIn();
+						}
+						else {
+							newContent.load(targetName + ".html", null, function () {
+								newContent.fadeIn();
+							})
+						};
+					});
+				});
+
+				if ($(window).width() > 559) {
+					$(".tab-fb").click();
+				}
+			});
+
+
+		</script>
+	</div>
+</body>
+
+</html>

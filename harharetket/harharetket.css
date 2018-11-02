@@ -1,0 +1,46 @@
+h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cover {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.spacer {
+    height: 1rem;
+}
+
+.lyrics-background {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.lyrics-background-dark {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.harharetket {
+    background-position: left top;
+    background-image: url(images/harharetket.jpg);
+    height: 450px;
+}
+
+.kysymys {
+    background-position: left top;
+    background-image: url(images/kysymys.jpg);
+}
+
+.aaripaat {
+    background-image: url(images/aaripaat.jpg);
+    background-position: 50% 50%;
+}
+
+.astuvansalmi {
+    background-image: url(images/astuvansalmi.jpg);
+}
+
+.harharetket2 {
+    background-image: url(images/harharetket2.jpg);
+}

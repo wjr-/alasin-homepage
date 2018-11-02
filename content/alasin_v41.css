@@ -1,0 +1,163 @@
+.landscape-hint {
+    display: none;
+    padding-top: 50px;
+    text-align: center;
+}
+
+@media (max-width: 559px) {
+    .mobile-visible-block {
+        display: block;
+    }
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 559px) and (orientation: portrait) and (min-height: 559px) {
+    .landscape-hint {
+        display: block;
+    }
+}
+
+@media (min-width: 559px) {
+    .mobile-visible-block {
+        display: none;
+    }
+}
+
+div .logo {
+    background-image: url(images/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 560px 120px;
+    height: 120px;
+}
+
+.tab {
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    cursor: pointer;
+    height: 60px;
+    text-align: center;
+}
+
+.tab div {
+    position: relative;
+    top: 65%;
+}
+
+.tab-selected,
+.tab:hover {
+    background-color: #efefef;
+}
+
+.tab-fb {
+    background-image: url(images/facebook.png);
+}
+
+.tab-twitter {
+    background-image: url(images/twitter.png);
+}
+
+.tab-spotify {
+    background-image: url(images/spotify.png);
+}
+
+.tab-youtube {
+    background-image: url(images/youtube.png);
+}
+
+.tab-discogs {
+    background-image: url(images/discogs.svg);
+}
+
+.tab-instagram {
+    background-image: url(images/instagram.png);
+}
+
+.tab-gigs {
+    background-image: url(images/bandsintown.png);
+}
+
+.tab-media {
+    background-image: url(images/drive.png);
+}
+
+.embedded {
+    height: 100%;
+    padding: 17px;
+    width: 560px;
+}
+
+.embedded-fb {
+    border: none;
+    height: 800px;
+    overflow: hidden;
+}
+
+.embedded-spotify-s {
+    height: 120px;
+}
+
+.embedded-spotify-l {
+    height: 380px;
+}
+
+.embedded-youtube {
+    height: 315px;
+}
+
+.past-gigs {
+    border-bottom: 1px solid rgba(124, 124, 124, 0.25);
+    padding: 10px 0 10px 0;
+    width: 506px;
+}
+
+.contact {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+/* Animation! */
+
+.rotate-right-angle {
+    -webkit-animation: right-angle 2s infinite linear;
+    -moz-animation: right-angle 2s infinite linear;
+    -o-animation: right-angle 2s infinite linear;
+    animation: right-angle 2s infinite linear;
+}
+@-moz-keyframes right-angle {
+    0% {
+        -moz-transform: rotate(0deg);
+    }
+    100% {
+        -moz-transform: rotate(90deg);
+    }
+}
+@-webkit-keyframes right-angle {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+    }
+}
+@-o-keyframes right-angle {
+    0% {
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        -o-transform: rotate(90deg);
+    }
+}
+@keyframes right-angle {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+}
