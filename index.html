@@ -27,53 +27,35 @@
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<div class="row">
-					<!-- Navigation on larger screens -->
-					<div class="col-xs-4 col-sm-4 mobile-hidden tab tab-fb" data-target="fb">
-						<div>Facebook</div>
-					</div>
-					<div class="col-xs-4 col-sm-4 mobile-hidden tab tab-spotify" data-target="spotify">
-						<div>Spotify</div>
-					</div>
-					<div class="col-xs-4 col-sm-4 mobile-hidden tab tab-youtube" data-target="youtube">
-						<div>Youtube</div>
-					</div>
-					<div class="col-xs-4 col-sm-4 mobile-hidden tab tab-gigs" data-target="gigs">
-						<div>Keikat</div>
-					</div>
-					<div class="col-xs-4 col-sm-4 mobile-hidden tab tab-media" data-target="media">
-						<div>Medialle</div>
-					</div>
-					<!-- Show as links on mobile -->
-					<a href="https://www.facebook.com/alasinyhtye/" class="col-xs-4 col-sm-4 mobile-visible-block tab tab-link tab-fb"
+					<a href="https://www.facebook.com/alasinyhtye/" class="col-xs-4 col-sm-4 tab tab-link tab-fb"
 					 target="_blank">
 						<div>Facebook
 							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
 						</div>
 					</a>
-					<a href="https://open.spotify.com/artist/5QgxtkJBLY1GOKCaVCXXM8" class="col-xs-4 col-sm-4 mobile-visible-block tab tab-link tab-spotify"
+					<a href="https://open.spotify.com/artist/5QgxtkJBLY1GOKCaVCXXM8" class="col-xs-4 col-sm-4 tab tab-link tab-spotify"
 					 target="_blank">
 						<div>Spotify
 							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
 						</div>
 					</a>
-					<a href="https://www.youtube.com/channel/UCjuBiZhg8gHDwM10KR4-tYw" class="col-xs-4 col-sm-4 mobile-visible-block tab tab-link tab-youtube"
+					<a href="https://www.youtube.com/channel/UCjuBiZhg8gHDwM10KR4-tYw" class="col-xs-4 col-sm-4 tab tab-link tab-youtube"
 					 target="_blank">
 						<div>Youtube
 							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
 						</div>
 					</a>
-					<a href="http://www.bandsintown.com/Alasin" class="col-xs-4 col-sm-4 mobile-visible-block tab tab-gigs" target="_blank">
+					<a href="http://www.bandsintown.com/Alasin" class="col-xs-4 col-sm-4 tab tab-gigs" target="_blank">
 						<div>Keikat
 							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
 						</div>
 					</a>
-					<a href="https://drive.google.com/open?id=0BxvX8zGLoTL7MERMeERKYWFKRmc" class="col-xs-4 col-sm-4 mobile-visible-block tab tab-link tab-media"
+					<a href="https://drive.google.com/drive/folders/0BxvX8zGLoTL7MERMeERKYWFKRmc?resourcekey=0-dHPym6J6gE11tF5mI75LDQ&usp=sharing" class="col-xs-4 col-sm-4 tab tab-link tab-media"
 					 target="_blank">
 						<div>Medialle
 							<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
 						</div>
 					</a>
-					<!-- Always links -->
 					<a href="https://www.discogs.com/artist/4263736-Alasin" class="col-xs-4 col-sm-4 tab tab-link tab-link tab-discogs"
 					 target="_blank">
 						<div>Julkaisut
@@ -101,63 +83,14 @@
 				</div>
 			</div>
 		</div>
-		<div id="content-container" class="row mobile-hidden">
-			<div id="dummy-content"></div>
-		</div>
-		<div class="landscape-hint">
-			<h2>
-				<span class="glyphicon glyphicon-phone rotate-right-angle" aria-hidden="true"></span>
-			</h2>
-		</div>
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3 contact">
 				<span>Yhteys / Contact: yhteys@alasin.fi, 050-3518215</span>
 			</div>
 		</div>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		 crossorigin="anonymous"></script>
-		<script type="text/javascript">
-			$(document).ready(function () {
-				$(".tab:not('.tab-link')").click(function () {
-
-					$(".tab").removeClass("tab-selected");
-					$(this).addClass("tab-selected");
-
-					var targetName = $(this).attr("data-target");
-
-					var oldContent = $("div[id$='content']:visible");
-					var newContent = $("#" + targetName + "-content");
-					var contentLoaded = true;
-					if (newContent.length === 0) {
-						contentLoaded = false;
-						newContent = $("<div id='" + targetName + "-content'></div>")
-							.hide()
-							.addClass("col-md-6 col-md-offset-3");
-						$("#content-container").append(newContent);
-					}
-
-					oldContent.fadeOut(function () {
-						var newContent = $("#" + targetName + "-content");
-						if (contentLoaded) {
-							newContent.fadeIn();
-						}
-						else {
-							newContent.load(targetName + ".html", null, function () {
-								newContent.fadeIn();
-							})
-						};
-					});
-				});
-
-				if ($(window).width() > 559) {
-					$(".tab-fb").click();
-				}
-			});
-
-
-		</script>
 	</div>
 </body>
 
